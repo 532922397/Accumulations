@@ -3,9 +3,7 @@
     package="com.example.liulu.accumulations">
 
     <application
-
         android:name=".common.DomeApplication"
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".animation.ShoppingcarEActivity" />
         <activity android:name=".animation.ShoppingcarBActivity" />
         <activity android:name=".animation.AnimationActivity" />
@@ -26,10 +23,8 @@
         <activity android:name=".androidfive.FiveActivity" />
         <activity android:name=".integeration.IntegerationActivity" />
         <activity android:name=".IntentActivity" />
-        <activity android:name=".other.OtherActivity"></activity>
+        <activity android:name=".other.OtherActivity" />
+        <activity android:name=".animation.TansferActivity"></activity>
     </application>
-
-
-
 
 </manifest>

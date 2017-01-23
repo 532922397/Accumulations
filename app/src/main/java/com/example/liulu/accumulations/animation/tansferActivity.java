@@ -3,7 +3,7 @@ package com.example.liulu.accumulations.animation;
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
 
-public class tansferActivity extends BaseActivity {
+public class TansferActivity extends BaseActivity {
 
 
     @Override
