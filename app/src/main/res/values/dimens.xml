@@ -25,6 +25,4 @@
     <dimen name="shopping_cart_total_price_word_size">20sp</dimen>
     <dimen name="shopping_cart_small_size">15sp</dimen>
     <dimen name="shopping_cart_bottom_recycle_height">250dp</dimen>
-
-
 </resources>
