@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.liulu.accumulations.animation.AnimationActivity">
+
+    <Button
+        android:id="@+id/btn_shoppingcar1"
+        style="@style/button_style"
+        android:text="模饿了吗" />
+
+    <Button
+        android:id="@+id/btn_shoppingcar2"
+        style="@style/button_style"
+        android:text="贝塞尔曲线" />
+</LinearLayout>
