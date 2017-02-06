@@ -16,4 +16,8 @@
         android:id="@+id/btn_shoppingcar2"
         style="@style/button_style"
         android:text="贝塞尔曲线" />
+    <Button
+        android:id="@+id/btn_transfer"
+        style="@style/button_style"
+        android:text="沉浸式转场动画" />
 </LinearLayout>

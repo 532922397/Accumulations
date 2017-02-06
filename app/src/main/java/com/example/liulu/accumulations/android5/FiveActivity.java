@@ -1,4 +1,4 @@
-package com.example.liulu.accumulations.androidfive;
+package com.example.liulu.accumulations.android5;
 
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;

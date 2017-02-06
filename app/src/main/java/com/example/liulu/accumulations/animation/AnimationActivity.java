@@ -32,4 +32,10 @@ public class AnimationActivity extends BaseActivity {
         goToActivity(ShoppingcarBActivity.class);
     }
 
+    /*沉浸式转场动画*/
+    @OnClick(R.id.btn_transfer)
+    public void goToTransfer(View view) {
+        goToActivity(TansferActivity.class);
+    }
+
 }

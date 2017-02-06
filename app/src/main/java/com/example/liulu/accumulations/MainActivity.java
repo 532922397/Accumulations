@@ -10,7 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.liulu.accumulations.androidfive.FiveActivity;
+import com.example.liulu.accumulations.android7.Android7Activity;
+import com.example.liulu.accumulations.android5.FiveActivity;
 import com.example.liulu.accumulations.animation.AnimationActivity;
 import com.example.liulu.accumulations.common.BaseActivity;
 import com.example.liulu.accumulations.customview.CustomviewActivity;
@@ -87,6 +88,11 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.btn_other)
     public void goToOther(View view) {
         goToActivity(OtherActivity.class);
+    }
+
+    @OnClick(R.id.btn_seven)
+    public void goToSeven(View view) {
+        goToActivity(Android7Activity.class);
     }
 
 }

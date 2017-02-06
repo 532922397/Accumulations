@@ -5,7 +5,7 @@
     <application
         android:name=".common.DomeApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/liulu"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,11 +20,15 @@
         <activity android:name=".animation.ShoppingcarBActivity" />
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".customview.CustomviewActivity" />
-        <activity android:name=".androidfive.FiveActivity" />
+        <activity android:name=".android5.FiveActivity" />
         <activity android:name=".integeration.IntegerationActivity" />
         <activity android:name=".IntentActivity" />
         <activity android:name=".other.OtherActivity" />
-        <activity android:name=".animation.TansferActivity"></activity>
+        <activity android:name=".animation.TansferActivity" />
+        <activity android:name=".animation.TransferSecondActivity" />
+        <activity android:name=".android7.NotificationActivity" />
+        <activity android:name=".android7.Android7Activity" />
+        <activity android:name=".other.XMLActivity"></activity>
     </application>
 
 </manifest>

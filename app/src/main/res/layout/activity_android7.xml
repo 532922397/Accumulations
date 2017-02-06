@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_android7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.liulu.accumulations.MainActivity">
-
-
+    tools:context="com.example.liulu.accumulations.android7.Android7Activity">
 
     <Button
-        android:id="@+id/btn_animation"
+        android:id="@+id/btn_notification"
         style="@style/button_style"
-        android:text="动画" />
+        android:text="通知" />
 
     <Button
         android:id="@+id/btn_five"
         style="@style/button_style"
         android:text="5.0" />
+
     <Button
         android:id="@+id/btn_seven"
         style="@style/button_style"
@@ -27,21 +26,6 @@
         android:id="@+id/btn_customview"
         style="@style/button_style"
         android:text="自定义view" />
-
-    <Button
-        android:id="@+id/btn_intgeration"
-        style="@style/button_style"
-        android:text="集成" />
-
-    <Button
-        android:id="@+id/btn_intent"
-        style="@style/button_style"
-        android:text="跳转activity" />
-
-    <Button
-        android:id="@+id/btn_other"
-        style="@style/button_style"
-        android:text="其他" />
 
 
 </LinearLayout>
