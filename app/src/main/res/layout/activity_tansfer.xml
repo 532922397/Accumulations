@@ -4,7 +4,7 @@
     android:id="@+id/activity_tansfer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.liulu.accumulations.animation.TansferActivity">
+    tools:context="com.example.liulu.accumulations.animation.TransferActivity">
 
     <Button
         android:id="@+id/btn_go"

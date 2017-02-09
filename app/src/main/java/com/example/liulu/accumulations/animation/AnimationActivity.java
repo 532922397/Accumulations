@@ -35,7 +35,7 @@ public class AnimationActivity extends BaseActivity {
     /*沉浸式转场动画*/
     @OnClick(R.id.btn_transfer)
     public void goToTransfer(View view) {
-        goToActivity(TansferActivity.class);
+        goToActivity(TransferActivity.class);
     }
 
 }

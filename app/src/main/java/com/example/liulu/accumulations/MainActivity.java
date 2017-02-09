@@ -17,6 +17,7 @@ import com.example.liulu.accumulations.common.BaseActivity;
 import com.example.liulu.accumulations.customview.CustomviewActivity;
 import com.example.liulu.accumulations.integeration.IntegerationActivity;
 import com.example.liulu.accumulations.other.OtherActivity;
+import com.example.liulu.accumulations.rxjava.RxjavaActivity;
 
 import org.xml.sax.XMLReader;
 
@@ -90,9 +91,15 @@ public class MainActivity extends BaseActivity {
         goToActivity(OtherActivity.class);
     }
 
+
     @OnClick(R.id.btn_seven)
     public void goToSeven(View view) {
         goToActivity(Android7Activity.class);
+    }
+
+    @OnClick(R.id.btn_rxjava)
+    public void goToRxJava(View view) {
+        goToActivity(RxjavaActivity.class);
     }
 
 }

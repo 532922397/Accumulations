@@ -25,5 +25,8 @@ public class OtherActivity extends BaseActivity {
     public void XML(View view) {
     goToActivity(XMLActivity.class);
     }
-
+    @OnClick(R.id.btn_test_touch)
+    public void TestTouch(View view) {
+        goToActivity(TouchActivity.class);
+    }
 }

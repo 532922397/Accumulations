@@ -39,6 +39,12 @@
         android:text="跳转activity" />
 
     <Button
+
+        android:id="@+id/btn_rxjava"
+        style="@style/button_style"
+        android:text="rxjava" />
+
+    <Button
         android:id="@+id/btn_other"
         style="@style/button_style"
         android:text="其他" />

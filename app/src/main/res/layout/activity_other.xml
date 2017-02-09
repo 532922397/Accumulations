@@ -11,5 +11,8 @@
         android:id="@+id/btn_xml"
         style="@style/button_style"
         android:text="解析xml" />
-
+    <Button
+        android:id="@+id/btn_test_touch"
+        style="@style/button_style"
+        android:text="touch事件" />
 </LinearLayout>

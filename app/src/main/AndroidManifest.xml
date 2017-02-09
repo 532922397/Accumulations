@@ -24,11 +24,21 @@
         <activity android:name=".integeration.IntegerationActivity" />
         <activity android:name=".IntentActivity" />
         <activity android:name=".other.OtherActivity" />
-        <activity android:name=".animation.TansferActivity" />
+        <activity android:name=".animation.TransferActivity" />
         <activity android:name=".animation.TransferSecondActivity" />
         <activity android:name=".android7.NotificationActivity" />
         <activity android:name=".android7.Android7Activity" />
-        <activity android:name=".other.XMLActivity"></activity>
+        <activity android:name=".other.XMLActivity" />
+        <activity android:name=".rxjava.RxjavaActivity" />
+        <activity android:name=".other.TouchActivity" />
+        <activity android:name=".rxjava.RxJavaMainActivity" />
+        <activity android:name=".rxjava.RxJavaRetrofitActivity" />
+        <activity android:name=".rxjava.RxAndroidActivity" />
+        <activity android:name=".rxjava.SchedulerActivity" />
+        <activity android:name=".rxjava.Operators1Activity" />
+        <activity android:name=".rxjava.Operators2Activity" />
+        <activity android:name=".rxjava.PollingActivity" />
+        <activity android:name=".rxjava.DebounceEditTextActivity"></activity>
     </application>
 
 </manifest>

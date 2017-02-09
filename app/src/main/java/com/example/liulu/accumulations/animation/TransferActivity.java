@@ -7,7 +7,7 @@ import com.example.liulu.accumulations.common.BaseActivity;
 
 import butterknife.OnClick;
 
-public class TansferActivity extends BaseActivity {
+public class TransferActivity extends BaseActivity {
 
 
     @Override
