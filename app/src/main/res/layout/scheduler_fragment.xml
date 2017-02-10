@@ -35,40 +35,33 @@
 
         <Button
             android:id="@+id/btn_just"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just"/>
 
 
         <Button
             android:id="@+id/btn_just_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+           style="@style/button_style"
             android:text="just-1"/>
         <Button
             android:id="@+id/btn_just_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just-2"/>
         <Button
             android:id="@+id/btn_just_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just-3"/>
         <Button
             android:id="@+id/btn_just_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just-4"/>
         <Button
             android:id="@+id/btn_just_five"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just-5"/>
         <Button
             android:id="@+id/btn_just_six"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="just-6"/>
         <TextView
             android:layout_width="match_parent"
@@ -78,8 +71,7 @@
             android:textColor="#000000"/>
         <Button
             android:id="@+id/btn_no_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="basic operation"/>
 
         <TextView
@@ -91,8 +83,7 @@
 
         <Button
             android:id="@+id/btn_one_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:text="one map"/>
 
 
@@ -111,8 +102,7 @@
 
             <Button
                 android:id="@+id/btn_long_operation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/button_style"
                 android:text="long operation"
                 android:textSize="16sp"
                 />
@@ -141,8 +131,7 @@
 
             <Button
                 android:id="@+id/btn_two_map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/button_style"
                 android:text="two map operation"
                 android:textSize="16sp"
                 />
