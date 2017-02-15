@@ -5,11 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:orientation="vertical">
 
 
     <TextView
@@ -21,24 +17,20 @@
 
     <Button
         android:id="@+id/btn_rxjava"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        style="@style/button_style"
         android:text="RxJava"
         android:textAllCaps="false" />
 
 
     <Button
         android:id="@+id/btn_retrofit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Rxjava Retrofit"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_rxandroid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="RxAndroid"
         android:textAllCaps="false" />
 

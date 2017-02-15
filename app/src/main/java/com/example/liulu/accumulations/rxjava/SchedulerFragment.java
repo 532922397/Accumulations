@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.example.liulu.accumulations.R;
+import com.example.liulu.accumulations.wiget.Log;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -37,6 +37,6 @@ public class Operators2Activity extends BaseActivity {
                 .findFragmentById(R.id.log_fragment);
         msgFilter.setNext(logFragment.getLogView());
 
-        Log.d("liulu", "Ready");
+        Log.e("liulu", "Ready");
     }
 }

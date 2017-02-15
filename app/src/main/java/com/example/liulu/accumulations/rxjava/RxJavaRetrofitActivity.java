@@ -1,6 +1,6 @@
 package com.example.liulu.accumulations.rxjava;
 
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
 
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
@@ -14,16 +14,16 @@ public class RxJavaRetrofitActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentManager manager = getSupportFragmentManager();
         RxJavaRetrofitFragment fragment = new RxJavaRetrofitFragment();
-        transaction.replace(R.id.sample_content_fragment, fragment);
-        transaction.commit();
+        manager.beginTransaction().replace(R.id.sample_content_fragment, fragment).commit();
     }
 
     @Override
     public int getLayout() {
         return R.layout.activity_rx_java_retrofit;
     }
+
     @Override
     public void initializeLogging() {
         LogWrapper logWrapper = new LogWrapper();

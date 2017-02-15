@@ -1,5 +1,7 @@
 package com.example.liulu.accumulations.rxjava;
 
+import android.util.Log;
+
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -23,12 +25,17 @@ public class ZhiHuManager {
     public ZhiHuApi getZhiHuService() {
 
         if (zhiHuApi == null) {
-            zhiHuApi = new Retrofit.Builder()
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build()
-                    .create(ZhiHuApi.class);
+            if (zhiHuApi == null) {
+                zhiHuApi = new Retrofit.Builder()
+                        .baseUrl("http://news-at.zhihu.com")
+                        .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build().create(ZhiHuApi.class);
+
+            }
+
         }
+        Log.e("", zhiHuApi.toString());
         return zhiHuApi;
     }
 

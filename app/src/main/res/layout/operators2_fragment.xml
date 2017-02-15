@@ -1,16 +1,11 @@
-
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <TextView
@@ -18,34 +13,29 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Transforming and Filtering Observables\n变换和过滤Obervable发出数据的操作符"
-            android:textColor="#000000"/>
-
+            android:textColor="#000000" />
 
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_flarmap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="flatmap"/>
+            style="@style/button_style"
+            android:text="flatmap"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_concatmap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="concat"/>
+            style="@style/button_style"
+            android:text="concat" />
 
         <Button
             android:id="@+id/btn_switchmap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="switchmap"/>
+            style="@style/button_style"
+            android:text="switchmap" />
 
         <Button
             android:id="@+id/btn_buffer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="buffer"/>
+            style="@style/button_style"
+            android:text="buffer" />
 
     </LinearLayout>
 </ScrollView>

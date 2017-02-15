@@ -31,7 +31,6 @@ public class Operators2Fragment extends Fragment {
 
 
     private CompositeSubscription mCompositeSubscription;
-    Subscription subscription;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

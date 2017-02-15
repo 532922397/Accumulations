@@ -1,0 +1,33 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="轮训操作"
+            android:textColor="#000000"/>
+
+
+
+        <Button
+            android:id="@+id/btn_polling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Polling"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -38,6 +38,6 @@ public class SchedulerActivity extends BaseActivity {
                 .findFragmentById(R.id.log_fragment);
         msgFilter.setNext(logFragment.getLogView());
 
-        Log.i("liulu", "Ready");
+        Log.e("liulu", "Ready");
     }
 }

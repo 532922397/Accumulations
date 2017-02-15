@@ -38,4 +38,11 @@ public class AnimationActivity extends BaseActivity {
         goToActivity(TransferActivity.class);
     }
 
+
+    /*lottie动画*/
+    @OnClick(R.id.btn_lottie)
+
+    public void goToLottie(View view) {
+        goToActivity(LottieActivity.class);
+    }
 }

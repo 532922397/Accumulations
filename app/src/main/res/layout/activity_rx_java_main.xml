@@ -14,38 +14,33 @@
 
     <Button
         android:id="@+id/btn_scheduler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Scheduler"
         android:textAllCaps="false" />
 
 
     <Button
         android:id="@+id/btn_operators1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Operators 1"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_operators2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Operators 2"
         android:textAllCaps="false" />
 
 
     <Button
         android:id="@+id/btn_operators4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Debounce EditText"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_operators3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button_style"
         android:text="Polling"
         android:textAllCaps="false" />
 

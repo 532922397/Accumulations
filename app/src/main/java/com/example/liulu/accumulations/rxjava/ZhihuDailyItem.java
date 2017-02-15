@@ -3,7 +3,7 @@ package com.example.liulu.accumulations.rxjava;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by jh on 2017/2/14.
+ * Created by liulu on 2017/2/14.
  */
 public class ZhihuDailyItem {
     @SerializedName("images")

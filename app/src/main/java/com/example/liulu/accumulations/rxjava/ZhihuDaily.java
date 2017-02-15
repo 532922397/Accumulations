@@ -5,8 +5,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 /**
- * Created by jh on 2017/2/14.
+ * Created by liulu on 2017/2/14.
  */
+
 public class ZhihuDaily {
     @SerializedName("date")
     private String date;

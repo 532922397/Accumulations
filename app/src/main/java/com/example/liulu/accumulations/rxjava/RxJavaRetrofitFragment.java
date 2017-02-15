@@ -3,13 +3,13 @@ package com.example.liulu.accumulations.rxjava;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.liulu.accumulations.R;
+import com.example.liulu.accumulations.wiget.Log;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -39,7 +39,8 @@ public class RxJavaRetrofitFragment extends Fragment {
 
     @OnClick(R.id.btn_get)
     public void onClick() {
-        ZhiHuManager.getInstance()
+        android.util.Log.e("liulu", "进入OnNext");
+        subscription = ZhiHuManager.getInstance()
                 .getZhiHuService()
                 .getLastDaily()
                 .subscribeOn(Schedulers.io())
@@ -47,33 +48,30 @@ public class RxJavaRetrofitFragment extends Fragment {
                 .subscribe(new Subscriber<ZhihuDaily>() {
                     @Override
                     public void onCompleted() {
-
+                        android.util.Log.e("liulu", "onCompleted");
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
+                        android.util.Log.e("liulu", "onError==" + e.getMessage());
                     }
 
                     @Override
                     public void onNext(ZhihuDaily zhihuDaily) {
-                        ZhihuDailyItem zhihuDailyItem = zhihuDaily.getStories().get(0);
-                        String title = zhihuDailyItem.getTitle();
-                        String date = zhihuDailyItem.getDate();
-                        String id = zhihuDailyItem.getId();
-                        int type = zhihuDailyItem.getType();
-                        printLog("title==" + title + "\n");
-                        printLog("date==" + date + "\n");
-                        printLog("id==" + id + "\n");
-                        printLog("type==" + type + "\n");
+                        ZhihuDailyItem item = zhihuDaily.getStories().get(0);
+                        printLog("Title:" + item.getTitle());
+                        printLog("Data:  " + item.getDate());
+                        printLog("Id:    " + item.getId());
+                        printLog("Type:  " + item.getType());
 
                     }
                 });
+        mCompositeSubscription.add(subscription);
 
     }
 
-    public void printLog(String log) {
-        Log.e("liulu", log);
+    public void printLog(String s) {
+        Log.e("liulu", s);
     }
 
     @Override

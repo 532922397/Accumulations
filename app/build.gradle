@@ -1,19 +1,18 @@
 apply plugin: 'com.android.application'
-
 android {
 
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     defaultConfig {
         applicationId "com.example.liulu.accumulation"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 24
 
         compileSdkVersion 24
         buildToolsVersion "24.0.1"
         defaultConfig {
             applicationId "com.example.liulu.accumulations"
-            minSdkVersion 14
+            minSdkVersion 16
             targetSdkVersion 24
             versionCode 1
             versionName "1.0"
@@ -52,6 +51,8 @@ android {
         compile 'com.squareup.retrofit2:adapter-rxjava:+'
         compile 'com.google.code.gson:gson:+'
         compile 'io.reactivex:rxandroid:1.2.1'
+        /*lottie动画*/
+        compile 'com.airbnb.android:lottie:1.0.1'
     }
 
 
