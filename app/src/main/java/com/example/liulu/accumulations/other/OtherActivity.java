@@ -21,12 +21,21 @@ public class OtherActivity extends BaseActivity {
         return R.layout.activity_other;
     }
 
-    @OnClick(R.id.btn_xml)
+    @OnClick({R.id.btn_xml,R.id.btn_test_touch,R.id.btn_save_photo})
     public void XML(View view) {
-    goToActivity(XMLActivity.class);
+        switch (view.getId()) {
+            case  R.id.btn_xml:
+                goToActivity(XMLActivity.class);
+                break;
+            case  R.id.btn_test_touch:
+                goToActivity(TouchActivity.class);
+                break;
+            case  R.id.btn_save_photo:
+                goToActivity(SavePhotoActivity.class);
+                break;
+        }
+
     }
-    @OnClick(R.id.btn_test_touch)
-    public void TestTouch(View view) {
-        goToActivity(TouchActivity.class);
-    }
+
+
 }

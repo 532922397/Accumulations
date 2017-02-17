@@ -11,8 +11,14 @@
         android:id="@+id/btn_xml"
         style="@style/button_style"
         android:text="解析xml" />
+
     <Button
         android:id="@+id/btn_test_touch"
         style="@style/button_style"
         android:text="touch事件" />
+
+    <Button
+        android:id="@+id/btn_save_photo"
+        style="@style/button_style"
+        android:text="储存图片到手机相册" />
 </LinearLayout>
