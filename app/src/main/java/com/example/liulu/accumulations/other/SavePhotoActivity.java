@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
@@ -75,7 +76,16 @@ public class SavePhotoActivity extends BaseActivity {
 
     @OnClick(R.id.btn_show)
     public void onClick(View view) {
-            UploadDialog.showDialog(getApplicationContext(), "正在上传");
+        final UploadDialog uploadDialog = new UploadDialog();
+
+        uploadDialog.showDialog(SavePhotoActivity.this, "正在加载");
+        new Thread() {
+            public void run() {
+
+                SystemClock.sleep(2000);
+                uploadDialog.cancelDialog();
+            }
+        }.start();
 
     }
 }

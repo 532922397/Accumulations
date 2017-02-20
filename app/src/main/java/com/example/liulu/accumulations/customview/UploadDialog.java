@@ -11,39 +11,31 @@ import com.example.liulu.accumulations.R;
  * Created by liulu on 2017/2/17.
  */
 
-public class UploadDialog extends Dialog {
-    private static UploadDialog progressDialog = null;
+public class UploadDialog {
 
-    public UploadDialog(Context context) {
-        super(context);
-    }
-
-    public UploadDialog(Context context, int themeResId) {
-        super(context, themeResId);
-
-    }
+    private Dialog progressDialog;
 
     /**
      * 显示dialog
      *
      * @param context
-     * @param textMsg 内容
+     * @param msg     内容
      */
-    public static UploadDialog showDialog(Context context, String textMsg) {
-        progressDialog = new UploadDialog(context, R.style.progressDialog);
+    public void showDialog(Context context, String msg) {
+        progressDialog = new Dialog(context, R.style.progressDialog);
         progressDialog.setContentView(R.layout.upload_progress);
         progressDialog.getWindow().getAttributes().gravity = Gravity.CENTER;
-        TextView tvMsg = (TextView) progressDialog.findViewById(R.id.tv_loadingmsg);
-        tvMsg.setText(textMsg);
+        TextView tvMsg = (TextView) progressDialog.findViewById(R.id.tv_msg);
+        tvMsg.setText(msg);
+        progressDialog.setCancelable(false);
         progressDialog.show();
 
-        return progressDialog;
     }
 
     /**
      * 关闭dialog
      */
-    public static void cancelDialog() {
+    public void cancelDialog() {
         progressDialog.cancel();
     }
 
