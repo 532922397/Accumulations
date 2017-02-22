@@ -1,59 +1,23 @@
 package com.example.liulu.accumulations;
 
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.text.Editable;
-import android.text.Html;
-import android.text.Spanned;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
-import com.example.liulu.accumulations.android7.Android7Activity;
 import com.example.liulu.accumulations.android5.FiveActivity;
+import com.example.liulu.accumulations.android7.Android7Activity;
 import com.example.liulu.accumulations.animation.AnimationActivity;
 import com.example.liulu.accumulations.common.BaseActivity;
 import com.example.liulu.accumulations.customview.CustomviewActivity;
+import com.example.liulu.accumulations.dagger2.Dagger2Activity;
 import com.example.liulu.accumulations.integeration.IntegerationActivity;
 import com.example.liulu.accumulations.other.OtherActivity;
 import com.example.liulu.accumulations.rxjava.RxjavaActivity;
 
-import org.xml.sax.XMLReader;
-
-import butterknife.Bind;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
-    @Bind(R.id.btn_customview)
-    Button btnCustomview;
-    @Bind(R.id.btn_intgeration)
-    Button btnIntgeration;
-    @Bind(R.id.btn_intent)
-    Button btnIntent;
-    @Bind(R.id.btn_other)
-    Button btnOther;
-    @Bind(R.id.activity_main)
-    LinearLayout activityMain;
-
     @Override
     protected void initData() {
-        Html.ImageGetter imageGetter = new Html.ImageGetter() {
-            @Override
-            public Drawable getDrawable(String source) {
-                return null;
-            }
-        };
-        Html.TagHandler tag = new Html.TagHandler() {
-            @Override
-            public void handleTag(boolean opening, String tag, Editable output, XMLReader xmlReader) {
 
-            }
-        };
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            Spanned spanned = Html.fromHtml("", 0, imageGetter, tag);
-            Log.e("TAG", "spanned==" + spanned);
-        }
     }
 
     @Override
@@ -61,45 +25,36 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-    @OnClick(R.id.btn_animation)
-    public void goToAnimation(View view) {
-        goToActivity(AnimationActivity.class);
+    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration, R.id.btn_intent, R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava,R.id.btn_dagger2})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_animation:
+                goToActivity(AnimationActivity.class);
+                break;
+            case R.id.btn_five:
+                goToActivity(FiveActivity.class);
+                break;
+            case R.id.btn_customview:
+                goToActivity(CustomviewActivity.class);
+                break;
+            case R.id.btn_intgeration:
+                goToActivity(IntegerationActivity.class);
+                break;
+            case R.id.btn_intent:
+                goToActivity(IntentActivity.class);
+                break;
+            case R.id.btn_other:
+                goToActivity(OtherActivity.class);
+                break;
+            case R.id.btn_seven:
+                goToActivity(Android7Activity.class);
+                break;
+            case R.id.btn_rxjava:
+                goToActivity(RxjavaActivity.class);
+                break;
+            case R.id.btn_dagger2:
+                goToActivity(Dagger2Activity.class);
+                break;
+        }
     }
-
-    @OnClick(R.id.btn_five)
-    public void goToFive(View view) {
-        goToActivity(FiveActivity.class);
-    }
-
-    @OnClick(R.id.btn_customview)
-    public void goToCustomview(View view) {
-        goToActivity(CustomviewActivity.class);
-    }
-
-    @OnClick(R.id.btn_intgeration)
-    public void goToIntgeration(View view) {
-        goToActivity(IntegerationActivity.class);
-    }
-
-    @OnClick(R.id.btn_intent)
-    public void goToIntent(View view) {
-        goToActivity(IntentActivity.class);
-    }
-
-    @OnClick(R.id.btn_other)
-    public void goToOther(View view) {
-        goToActivity(OtherActivity.class);
-    }
-
-
-    @OnClick(R.id.btn_seven)
-    public void goToSeven(View view) {
-        goToActivity(Android7Activity.class);
-    }
-
-    @OnClick(R.id.btn_rxjava)
-    public void goToRxJava(View view) {
-        goToActivity(RxjavaActivity.class);
-    }
-
 }

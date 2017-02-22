@@ -23,7 +23,7 @@ import rx.subscriptions.CompositeSubscription;
 
 
 /**
- * Created by jh on 2017/2/15.
+ * Created by liulu on 2017/2/15
  */
 public class PollingFragment extends Fragment {
     private int N = 0;

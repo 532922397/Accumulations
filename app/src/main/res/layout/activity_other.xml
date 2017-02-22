@@ -21,4 +21,8 @@
         android:id="@+id/btn_save_photo"
         style="@style/button_style"
         android:text="储存图片到手机相册" />
+    <Button
+        android:id="@+id/btn_pinyin_search"
+        style="@style/button_style"
+        android:text="拼音搜索" />
 </LinearLayout>

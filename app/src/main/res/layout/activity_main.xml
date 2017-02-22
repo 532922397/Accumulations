@@ -43,6 +43,12 @@
         android:id="@+id/btn_rxjava"
         style="@style/button_style"
         android:text="rxjava" />
+    <Button
+
+        android:id="@+id/btn_dagger2"
+        style="@style/button_style"
+        android:text="dagger2" />
+
 
     <Button
         android:id="@+id/btn_other"

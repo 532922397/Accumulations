@@ -21,7 +21,7 @@ public class OtherActivity extends BaseActivity {
         return R.layout.activity_other;
     }
 
-    @OnClick({R.id.btn_xml,R.id.btn_test_touch,R.id.btn_save_photo})
+    @OnClick({R.id.btn_xml,R.id.btn_test_touch,R.id.btn_save_photo,R.id.btn_pinyin_search})
     public void XML(View view) {
         switch (view.getId()) {
             case  R.id.btn_xml:
@@ -32,6 +32,9 @@ public class OtherActivity extends BaseActivity {
                 break;
             case  R.id.btn_save_photo:
                 goToActivity(SavePhotoActivity.class);
+                break;
+            case R.id.btn_pinyin_search:
+                goToActivity(SearchActivity.class);
                 break;
         }
 
