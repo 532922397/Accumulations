@@ -15,3 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class * extends java.lang.annotation.Annotation
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keep class com.alipay.euler.andfix.**{
+    *;
+}
+-keep class com.taobao.hotfix.aidl.**{*;}
+-keep class com.ta.utdid2.device.**{*;}
+-keep class com.taobao.hotfix.HotFixManager{
+    public *;
+}

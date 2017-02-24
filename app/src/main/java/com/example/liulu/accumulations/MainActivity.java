@@ -1,6 +1,7 @@
 package com.example.liulu.accumulations;
 
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.liulu.accumulations.android5.FiveActivity;
 import com.example.liulu.accumulations.android7.Android7Activity;
@@ -17,7 +18,8 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
-
+//      Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
+      Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -11,27 +11,15 @@ import com.example.liulu.accumulations.model.TestDagger2User;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import dagger.Lazy;
 
 public class Dagger2Activity extends BaseActivity {
     @Inject
     TestDagger2User user;
     TestUserComponent component;
-    Lazy<TestDagger2User> userLazy; // 懒加载，在用时就会得到一个TestDagger2User对象
+    // Lazy<TestDagger2User> userLazy; // 懒加载，在用时就会得到一个TestDagger2User对象
 
     @Bind(R.id.tv_show)
     TextView tvShow;
-
-//    public static String toUtf8(String str) {
-//                String result = null;
-//                try {
-//                         result = new String(str.getBytes("UTF-8"), "UTF-8");
-//                     } catch (UnsupportedEncodingException e) {
-//                        // TODO Auto-generated catch block
-//                         e.printStackTrace();
-//                     }
-//                 return result;
-//            }
 
 
     @Override

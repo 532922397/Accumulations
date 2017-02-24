@@ -2,8 +2,6 @@ package com.example.liulu.accumulations.dagger2;
 
 import com.example.liulu.accumulations.model.TestDagger2User;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -12,7 +10,7 @@ import dagger.Provides;
  */
 @Module
 public class TestUserModule {
-    @Singleton // 单例
+//    @Singleton // 单例
     @Provides // 向里提供参数向外提供依赖
     public TestDagger2User providesUser() {
 
