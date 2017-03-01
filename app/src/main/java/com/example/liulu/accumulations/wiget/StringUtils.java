@@ -49,7 +49,7 @@ public class StringUtils {
      */
     private String first ;
     public static String filter(String character) {
-        String s = character.replaceAll("[^(a-zA-Z0-9\\u4e00-\\u9fa5\\:：*_)]", "");
+        String s = character.replaceAll("[^(a-z0-8\\u4e00-\\u9fa5\\？?)]", "");
         return s;
     }
 
