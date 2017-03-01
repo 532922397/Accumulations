@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 外部存储读权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".common.DomeApplication"
         android:allowBackup="true"
@@ -60,7 +61,8 @@
         <activity android:name=".animation.ByNetActivity" />
         <activity android:name=".other.SavePhotoActivity" />
         <activity android:name=".other.SearchActivity" />
-        <activity android:name=".dagger2.Dagger2Activity"></activity>
+        <activity android:name=".dagger2.Dagger2Activity" />
+        <activity android:name=".other.IconFontActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.liulu.accumulations.wiget;
+package com.example.liulu.accumulations.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;

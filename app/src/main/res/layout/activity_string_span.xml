@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_string_span"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.liulu.accumulations.other.IconFontActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="100dp">
+
+        <TextView
+            android:id="@+id/company_msg_title"
+            style="@style/tv_user_info_title"
+            android:text="我的信息" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/tv_user_info_content"
+            android:layout_below="@id/company_msg_title"
+            android:text="@string/one" />
+
+    </RelativeLayout>
+
+</LinearLayout>

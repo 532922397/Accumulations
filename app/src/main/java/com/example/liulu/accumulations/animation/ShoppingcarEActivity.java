@@ -25,7 +25,7 @@ import com.example.liulu.accumulations.imp.ShopCartImp;
 import com.example.liulu.accumulations.model.Dish;
 import com.example.liulu.accumulations.model.DishMenu;
 import com.example.liulu.accumulations.model.ShopCart;
-import com.example.liulu.accumulations.wiget.FakeAddImageView;
+import com.example.liulu.accumulations.view.FakeAddImageView;
 import com.example.liulu.accumulations.wiget.PointFTypeEvaluator;
 import com.example.liulu.accumulations.wiget.ShopCartDialog;
 

@@ -1,4 +1,4 @@
-package com.example.liulu.accumulations.wiget;
+package com.example.liulu.accumulations.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
