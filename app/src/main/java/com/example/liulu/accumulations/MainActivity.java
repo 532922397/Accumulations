@@ -15,11 +15,21 @@ import com.example.liulu.accumulations.rxjava.RxjavaActivity;
 
 import butterknife.OnClick;
 
+/**
+ * 阿里HotFix
+ * 1--注册账号
+ * 2==创建应用
+ * 3--配置清单列表
+ * 4--配置gradle，application初始化
+ * 5==得到新旧apk从而得到patch
+ * 6--上传patch
+ * 7--发布（灰度或全量）
+ */
 public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
-//      Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
-      Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
+      Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -27,7 +37,7 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration, R.id.btn_intent, R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava,R.id.btn_dagger2})
+    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration, R.id.btn_intent, R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava, R.id.btn_dagger2})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_animation:

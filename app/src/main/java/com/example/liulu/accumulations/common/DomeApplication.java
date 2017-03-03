@@ -8,7 +8,7 @@ import com.taobao.hotfix.PatchLoadStatusListener;
 import com.taobao.hotfix.util.PatchStatusCode;
 
 /**
- * Created by jh on 2017/1/5.
+ * Created by liulu on 2017/1/5
  */
 
 public class DomeApplication extends Application {
