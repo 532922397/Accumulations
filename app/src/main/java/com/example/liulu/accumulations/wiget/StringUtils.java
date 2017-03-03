@@ -9,10 +9,13 @@ import java.util.regex.PatternSyntaxException;
  */
 
 public class StringUtils {
+    /**
+     * 过滤出数字英文汉字以及制定字符
+     */
     public static String StringFilter(String str) throws PatternSyntaxException {
 //        String regEx = "[/\\：:*_|\"\n\t]"; //要过滤掉的字符
 //        String regEx ="[`~!@#$%^&*()+=|{}';',\\[\\].<>/?~！@#￥%……&（）——+|{}【】‘；”“’。，、？]";
-        String regEx ="[^(a-zA-Z0-9\\u4e00-\\u9fa5\\？?))]";
+        String regEx = "[^(a-zA-Z0-9\\u4e00-\\u9fa5\\？?))]";
 
 
         Pattern p = Pattern.compile(regEx);
@@ -47,10 +50,10 @@ public class StringUtils {
     /**
      * 过滤出字母、数字和中文
      */
-    private String first ;
+    private String first;
+
     public static String filter(String character) {
         String s = character.replaceAll("[^(a-z0-8\\u4e00-\\u9fa5]", "");
         return s;
     }
-
 }

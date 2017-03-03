@@ -27,3 +27,4 @@
 -keep class com.taobao.hotfix.HotFixManager{
     public *;
 }
+-keep public class com.example.liulu.accumulations.MainActivity{*;}

@@ -1,7 +1,6 @@
 package com.example.liulu.accumulations;
 
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.liulu.accumulations.android5.FiveActivity;
 import com.example.liulu.accumulations.android7.Android7Activity;
@@ -12,6 +11,8 @@ import com.example.liulu.accumulations.dagger2.Dagger2Activity;
 import com.example.liulu.accumulations.integeration.IntegerationActivity;
 import com.example.liulu.accumulations.other.OtherActivity;
 import com.example.liulu.accumulations.rxjava.RxjavaActivity;
+import com.example.liulu.accumulations.wiget.TestHotFix;
+import com.taobao.hotfix.HotFixManager;
 
 import butterknife.OnClick;
 
@@ -28,10 +29,18 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
-      Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
-//        Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
-    }
+        // Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
+        // String s = StringUtils.filterNumber("111");
+        // Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+        // TestHotFix.show(this, "hahahahahha");
+        TestHotFix.show(this, "我被添加了混淆");
 
+    }
+    //    private void show() {
+    //        Toast.makeText(MainActivity.this, "show", Toast.LENGTH_SHORT).show();
+    //        HotFixManager.getInstance().queryNewHotPatch(); // 手动调用请求服务器是否有更新并进行下一步操作
+    //    }
     @Override
     public int getLayout() {
         return R.layout.activity_main;
@@ -41,6 +50,7 @@ public class MainActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_animation:
+                HotFixManager.getInstance().queryNewHotPatch();
                 goToActivity(AnimationActivity.class);
                 break;
             case R.id.btn_five:

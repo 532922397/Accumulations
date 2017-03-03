@@ -1,6 +1,7 @@
 package com.example.liulu.accumulations.animation;
 
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
@@ -12,7 +13,7 @@ public class AnimationActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+     Toast.makeText(AnimationActivity.this, "我第四次进来了", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.example.liulu.accumulations.android5;
 
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Button;
@@ -20,8 +19,8 @@ public class FiveActivity extends BaseActivity {
     Button btnSnackbar;
     @Bind(R.id.activity_main)
     RelativeLayout activityMain;
-    @Bind(R.id.btn_floatingbar)
-    FloatingActionButton btnFloatingbar;
+//    @Bind(R.id.btn_floatingbar)
+//    FloatingActionButton btnFloatingbar;
 
     @Override
     protected void initData() {
