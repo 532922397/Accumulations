@@ -6,6 +6,7 @@
     <string name="shopcart">购物车</string>
     <string name="clear">清空</string>
     <string name="one">%1$s &#xe604;</string>
+    <string name="at_msg_unread_count" >%1$s人未读</string>
 
 
 </resources>

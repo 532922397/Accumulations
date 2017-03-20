@@ -1,5 +1,6 @@
 package com.example.liulu.accumulations;
 
+import android.content.Context;
 import android.view.View;
 
 import com.example.liulu.accumulations.android5.FiveActivity;
@@ -14,29 +15,91 @@ import com.example.liulu.accumulations.rxjava.RxjavaActivity;
 import com.example.liulu.accumulations.wiget.TestHotFix;
 import com.taobao.hotfix.HotFixManager;
 
+import java.lang.reflect.Method;
+
 import butterknife.OnClick;
 
 /**
  * 阿里HotFix
  * 1--注册账号
- * 2==创建应用
+ * 2--创建应用
  * 3--配置清单列表
  * 4--配置gradle，application初始化
- * 5==得到新旧apk从而得到patch
+ * 5--得到新旧apk从而得到patch
  * 6--上传patch
  * 7--发布（灰度或全量）
+ */
+
+/**
+ * 两个参数：
+ * 1。packageName  包名，要得到Context的包名
+ * 2。flags  标志位，有CONTEXT_INCLUDE_CODE和CONTEXT_IGNORE_SECURITY两个选项。CONTEXT_INCLUDE_CODE的意思是包括代码，也就是说可以执行这个包里面的代码。CONTEXT_IGNORE_SECURITY的意思是忽略安全警告，如果不加这个标志的话，有些功能是用不了的，会出现安全警告。
  */
 public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
-        // Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
-        // Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
-        // String s = StringUtils.filterNumber("111");
-        // Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
-        // TestHotFix.show(this, "hahahahahha");
-        TestHotFix.show(this, "我被添加了混淆");
+        testHotFix();
 
     }
+
+    private void testHotFix() {
+    /*基本测试*/
+        // Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
+
+        /*添加工具类方法*/
+        // String s = StringUtils.filterNumber("111");
+        // Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+
+        /*添加全局变量*/
+        // TestHotFix.show(this, "添加全局变量后" + a);
+
+        /*混淆*/
+        // TestProguard.show(this, "我被添加了混淆");
+
+        /*测试拥有double、float类型的参数*/
+        // TestHotFix.showCLong(this, 34545);
+
+        /*新增方法不可以定义但是可以通过新增类的方法*/
+        // NewClass.show("我是新增类", getApplicationContext());
+
+        /*构造不能被patch*/
+        // TestHotFix.show(this, "未修改构造前");
+        // new TestHotFixModle(this);
+
+        /*参数超过8*/
+        // TestHotFix.showMax(this, "", "", "", "", "", "", "", "");
+
+        /*测试泛型*/
+        // TestHotFixModle<String> modle = new TestHotFixModle<String>();
+        // modle.setData("我是泛型，你来咬我啊！");
+        // TestHotFix.show(this, modle.getData());
+
+        /*尝试资源修复*/
+        //  ivTest.setImageResource(R.drawable.ic_add_circle_blue_700_24dp);
+        // TestHotFix.show(this, "我被添加了混淆");
+
+        /*测试反射静态方法*/
+        try {
+            // Class<?> toastClass = Class.forName("com.example.liulu.accumulations.wiget.TestHotFix");
+            // TestHotFix testHotFix = (TestHotFix) toastClass.newInstance();
+            Method test2 = TestHotFix.class.getDeclaredMethod("test2", String.class, Context.class);
+            test2.invoke(TestHotFix.class.newInstance(), "被成功反射静态方法", MainActivity.this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        /*测试非反射静态方法*/
+//        try {
+//           // Class<?> name = Class.forName("com.example.liulu.accumulations.wiget.TestHotFix");
+//            Method method = TestHotFix.class.getDeclaredMethod("test1", String.class, Context.class);
+//            // method.setAccessible(true);
+//            method.invoke(TestHotFix.class.newInstance(), "被成功反射非静态方法", MainActivity.this);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            Log.e("liulu", e.getMessage());
+//        }
+    }
+
     //    private void show() {
     //        Toast.makeText(MainActivity.this, "show", Toast.LENGTH_SHORT).show();
     //        HotFixManager.getInstance().queryNewHotPatch(); // 手动调用请求服务器是否有更新并进行下一步操作

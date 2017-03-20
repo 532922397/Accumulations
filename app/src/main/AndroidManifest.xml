@@ -36,7 +36,9 @@
         <activity android:name=".animation.ShoppingcarBActivity" />
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".customview.CustomviewActivity" />
-        <activity android:name=".android5.FiveActivity" />
+        <activity
+            android:name=".android5.FiveActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".integeration.IntegerationActivity" />
         <activity android:name=".IntentActivity" />
         <activity android:name=".other.OtherActivity" />
@@ -62,7 +64,8 @@
         <activity android:name=".other.SavePhotoActivity" />
         <activity android:name=".other.SearchActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
-        <activity android:name=".other.IconFontActivity"></activity>
+        <activity android:name=".other.IconFontActivity" />
+        <activity android:name=".other.TestLayoutActivity"></activity>
     </application>
 
 </manifest>

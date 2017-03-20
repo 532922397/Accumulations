@@ -15,6 +15,11 @@
         android:text="Snackbar"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_one"
+        style="@style/button_style"
+        android:text="结合使用1"
+        android:textAllCaps="false" />
     <!--floatingActionbar-->
     <!--app:backgroundTint - 设置FAB的背景颜色。-->
     <!--app:rippleColor - 设置FAB点击时的背景颜色。-->
@@ -25,18 +30,17 @@
     <!--src - 设置FAB的图标，Google建议符合Design设计的该图标大小为24dp。-->
     <!--app:layout_anchor - 设置FAB的锚点，即以哪个控件为参照点设置位置。-->
     <!--app:layout_anchorGravity - 设置FAB相对锚点的位置，值有 bottom、center、right、left、top等。-->
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/btn_floatingbar"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginBottom="20dp"-->
-        <!--android:layout_marginRight="20dp"-->
-        <!--android:backgroundTint="@color/colorAccent"-->
-        <!--android:src="@drawable/actionbar_ic_more"-->
-        <!--android:text="floatingactionbar"-->
-        <!--app:elevation="10dp" />-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorAccent"
+        android:src="@drawable/actionbar_ic_more"
+        app:elevation="10dp" />
 
 
 </RelativeLayout>

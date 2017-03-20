@@ -28,7 +28,6 @@ import static rx.Observable.timer;
 
 public class Operators1Fragment extends Fragment {
 
-
     private CompositeSubscription compositeSubscription;
 
     @Override

@@ -25,4 +25,53 @@
     <dimen name="shopping_cart_total_price_word_size">20sp</dimen>
     <dimen name="shopping_cart_small_size">15sp</dimen>
     <dimen name="shopping_cart_bottom_recycle_height">250dp</dimen>
+
+    <!--左侧用户昵称距离左侧边距-->
+    <dimen name="chatting_left_name_margin_left">15dp</dimen>
+    <!--左侧用户昵称距离右侧边距-->
+    <dimen name="chatting_left_name_margin_right">36dp</dimen>
+    <!--左侧用户昵称距离底部边距-->
+    <dimen name="chatting_left_name_margin_bottom">2dp</dimen>
+    <!--左侧用户昵称字体大小-->
+    <dimen name="chatting_left_name_text_size">12sp</dimen>
+    <!--左侧消息气泡距离左侧头像距离-->
+    <dimen name="chatting_left_content_margin_left">8dp</dimen>
+    <!--左侧消息气泡距离右侧边距-->
+    <dimen name="chatting_left_content_margin_right">36dp</dimen>
+    <!--左侧文本消息字体大小-->
+    <dimen name="chatting_left_content_text_size">15sp</dimen>
+    <!--右侧用户昵称距离左侧边距-->
+    <dimen name="chatting_right_name_margin_left">36dp</dimen>
+    <!--右侧用户昵称距离右侧边距-->
+    <dimen name="chatting_right_name_margin_right">15dp</dimen>
+    <!--右侧用户昵称距离底部边距-->
+    <dimen name="chatting_right_name_margin_bottom">2dp</dimen>
+    <!--右侧用户昵称字体大小-->
+    <dimen name="chatting_right_name_text_size">12sp</dimen>
+    <!--右侧消息气泡距离左侧距离-->
+    <dimen name="chatting_right_content_margin_left">36dp</dimen>
+    <!--右侧消息气泡距离右侧头像距离-->
+    <dimen name="chatting_right_content_margin_right">8dp</dimen>
+    <!--右侧文本消息字体大小-->
+    <dimen name="chatting_right_content_text_size">16sp</dimen>
+    <!--系统消息字体大小-->
+    <dimen name="chatting_system_message_text_size">12sp</dimen>
+    <!--置顶会话顶部间隔-->
+    <dimen name="top_conversation_divider_height">12dp</dimen>
+    <!--名字和头像的高度差-->
+    <dimen name="topMargin_between_head_and_name">6dp</dimen>
+
+    <!-- *********************************以下是聊天窗口自定义dimens********************************* -->
+
+    <!--消息最小高度-->
+    <dimen name="chatting_content_min_height">40dp</dimen>
+    <!--消息item左侧padding-->
+    <dimen name="chatting_padding_left">14dp</dimen>
+    <!--消息item右侧padding-->
+    <dimen name="chatting_padding_right">14dp</dimen>
+    <!--消息item底部padding-->
+    <dimen name="chatting_padding_bottom">20dp</dimen>
+    <!--头像大小-->
+    <dimen name="chatting_head_size">40dp</dimen>
+
 </resources>

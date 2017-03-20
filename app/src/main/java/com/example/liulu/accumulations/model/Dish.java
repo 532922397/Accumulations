@@ -1,7 +1,7 @@
 package com.example.liulu.accumulations.model;
 
 /**
- * Created by cheng on 16-11-10.
+ * Created by cheng on 16-11-10
  */
 public class Dish {
 

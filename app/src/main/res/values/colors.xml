@@ -14,4 +14,31 @@
     <color name="white">#FFF</color>
 
 
+    <!--原图相关色值-->
+    <color name="color_blue">#00b4ff</color>
+    <color name="color_blue_light">#535A60</color>
+    <color name="color_blue_dark">#212c33</color>
+    <color name="color_gray_01">#525252</color>
+    <color name="color_gray_02">#999999</color>
+    <color name="color_gray_03">#CCCCCC</color>
+    <color name="color_gray_04">#EEEEEE</color>
+    <color name="color_gray_search">#C4C6CF</color>
+    <color name="color_n2_2">#999999</color>
+    <color name="color_n2_4">#3D4145</color>
+    <color name="color_n1_6">#DCDEE3</color>
+    <color name="color_n1_5">#E6E7EB</color>
+    <color name="color_n1_4">#EBECF0</color>
+
+    <color name="text_color_link">#3366FF</color>
+
+    <!-- *********************************以下是聊天窗口自定义color********************************* -->
+    <!--聊天窗口背景色-->
+    <color name="chatting_background_color">#f9f9f9</color>
+    <!--系统消息背景色-->
+    <color name="chatting_system_message_background_color">#d0d0d0</color>
+    <!--回复框背景色-->
+    <color name="chatting_reply_bar_background_color">#F7F8FA</color>
+    <!--点击加号后的扩展区域背景色-->
+    <color name="chatting_expand_view_background_color">#ffffff</color>
+
 </resources>

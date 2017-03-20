@@ -49,6 +49,33 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="chatting_detail_show_time_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_gray_02</item>
+    </style>
+
+    <style name="chatting_detail_text_left_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorLink">@color/text_color_link</item>
+    </style>
+
+    <style name="chatting_detail_sysmsg_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:paddingBottom">5dip</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">5dip</item>
+    </style>
+
+    <style name="chatting_detail_text_right_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/white</item>
+
+    </style>
+
     <declare-styleable name="MaxHeightView">
         <attr name="mhv_HeightRatio" format="reference|float" />
         <attr name="mhv_HeightDimen" format="reference|dimension" />

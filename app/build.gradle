@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 //首先引入 apt
 apply plugin: 'com.neenbedankt.android-apt'
-
 buildscript {
     repositories {
         mavenLocal()
@@ -25,7 +24,6 @@ repositories {
         dirs 'libs'
     }
 }
-
 android {
 
     compileSdkVersion 24
@@ -60,12 +58,13 @@ android {
         androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
             exclude group: 'com.android.support', module: 'support-annotations'
         })
-        compile 'com.android.support:recyclerview-v7:24.2.1'
+        compile 'com.android.support:recyclerview-v7:25.2.0'
         compile 'com.android.support:appcompat-v7:24.0.1'
         testCompile 'junit:junit:4.12'
         compile 'com.jakewharton:butterknife:7.0.1'
         compile 'com.squareup.okhttp3:okhttp:3.4.1'
-        compile project(':testlib')
+        // compile project(':testlib')
+        compile project(':updatebundle')
         compile 'io.reactivex:rxandroid:1.0.1'
         // Because RxAndroid releases are few and far between, it is recommended you also
         // explicitly depend on RxJava's latest version for bug fixes and new features.
@@ -81,7 +80,7 @@ android {
         compile files('libs/pinyin4j-2.5.0.jar')
         /*lottie动画*/
         compile 'com.airbnb.android:lottie:1.0.1'
-        compile 'com.android.support:design:24.1.1'
+        compile 'com.android.support:design:25.2.0'
         //java注解
         provided 'javax.annotation:javax.annotation-api:1.2'
         //dagger2
