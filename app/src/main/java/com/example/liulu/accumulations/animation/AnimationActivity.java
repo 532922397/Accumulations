@@ -13,7 +13,7 @@ public class AnimationActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-     Toast.makeText(AnimationActivity.this, "我第四次进来了", Toast.LENGTH_SHORT).show();
+        Toast.makeText(AnimationActivity.this, "我第四次进来了", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -22,28 +22,45 @@ public class AnimationActivity extends BaseActivity {
     }
 
     /*仿饿了么*/
-    @OnClick(R.id.btn_shoppingcar1)
+    @OnClick({R.id.btn_shoppingcar1, R.id.btn_shoppingcar2, R.id.btn_transfer, R.id.btn_lottie, R.id.btn_danmu})
     public void goToEShoppingcar(View view) {
-        goToActivity(ShoppingcarEActivity.class);
+        switch (view.getId()) {
+            case R.id.btn_shoppingcar1:
+                goToActivity(ShoppingcarEActivity.class);
+                break;
+            case R.id.btn_shoppingcar2:
+                goToActivity(ShoppingcarBActivity.class);
+                break;
+            case R.id.btn_transfer:
+                goToActivity(TransferActivity.class);
+                break;
+            case R.id.btn_lottie:
+                goToActivity(LottieActivity.class);
+                break;
+            case R.id.btn_danmu:
+                goToActivity(DanmuActivity.class);
+                break;
+        }
+
     }
 
     /*贝塞尔曲线*/
     @OnClick(R.id.btn_shoppingcar2)
     public void goToBShoppingcar(View view) {
-        goToActivity(ShoppingcarBActivity.class);
+
     }
 
     /*沉浸式转场动画*/
     @OnClick(R.id.btn_transfer)
     public void goToTransfer(View view) {
-        goToActivity(TransferActivity.class);
-    }
 
+    }
 
     /*lottie动画*/
     @OnClick(R.id.btn_lottie)
 
     public void goToLottie(View view) {
-        goToActivity(LottieActivity.class);
+
     }
+
 }

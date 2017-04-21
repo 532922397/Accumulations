@@ -3,7 +3,6 @@ package com.example.liulu.accumulations.android7;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -14,8 +13,6 @@ import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
 
 import butterknife.OnClick;
-
-import static android.content.Context.NOTIFICATION_SERVICE;
 
 /**
  * 通知页面
@@ -45,7 +42,7 @@ public class NotificationActivity extends BaseActivity {
         Notification build = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                Bitmap bitmap = ((BitmapDrawable) getDrawable(R.drawable.liulu)).getBitmap();
+                Bitmap bitmap = ((BitmapDrawable) getDrawable(R.drawable.actionbar_ic_more)).getBitmap();
                 build = new Notification.Builder(this)
                         .setSmallIcon(R.drawable.circle)
                         .setLargeIcon(bitmap)
@@ -72,7 +69,7 @@ public class NotificationActivity extends BaseActivity {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         Bitmap bitmap = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            bitmap = ((BitmapDrawable) getDrawable(R.drawable.liulu)).getBitmap();
+            bitmap = ((BitmapDrawable) getDrawable(R.drawable.actionbar_ic_more)).getBitmap();
         }
         builder.setSmallIcon(R.drawable.circle)
                 .setLargeIcon(bitmap)

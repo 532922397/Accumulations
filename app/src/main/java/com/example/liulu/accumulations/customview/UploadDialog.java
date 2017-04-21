@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.example.liulu.accumulations.R;
 
 /**
- * Created by liulu on 2017/2/17.
+ * Created by liulu on 2017/2/17
  */
 
 public class UploadDialog {

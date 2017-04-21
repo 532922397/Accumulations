@@ -40,5 +40,6 @@
     <color name="chatting_reply_bar_background_color">#F7F8FA</color>
     <!--点击加号后的扩展区域背景色-->
     <color name="chatting_expand_view_background_color">#ffffff</color>
+    <color name="head_text_color">#316CCB</color>
 
 </resources>

@@ -7,12 +7,15 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.liulu.accumulations.R;
+import com.example.liulu.accumulations.android7.NotificationActivity;
 import com.example.liulu.accumulations.common.BaseActivity;
+import com.example.liulu.accumulations.databinding.DataBindingActivity;
 import com.example.liulu.accumulations.view.NullMenuEditText;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
+import static com.example.liulu.accumulations.R.id.btn_test_binding;
 import static com.example.liulu.accumulations.wiget.StringUtils.StringFilter;
 
 
@@ -43,7 +46,7 @@ public class OtherActivity extends BaseActivity implements TextWatcher {
         return R.layout.activity_other;
     }
 
-    @OnClick({R.id.btn_xml, R.id.btn_test_touch, R.id.btn_save_photo, R.id.btn_pinyin_search, R.id.btn_StringSpan, R.id.btn_test_layout})
+    @OnClick({R.id.btn_test_sub, R.id.btn_xml, R.id.btn_test_touch, R.id.btn_save_photo, R.id.btn_notification, R.id.btn_test_binding, R.id.btn_pinyin_search, R.id.btn_StringSpan, R.id.btn_test_layout})
     public void XML(View view) {
         switch (view.getId()) {
             case R.id.btn_xml:
@@ -64,7 +67,15 @@ public class OtherActivity extends BaseActivity implements TextWatcher {
             case R.id.btn_test_layout:
                 goToActivity(TestLayoutActivity.class);
                 break;
-
+            case R.id.btn_notification:
+                goToActivity(NotificationActivity.class);
+                break;
+            case btn_test_binding:
+                goToActivity(DataBindingActivity.class);
+                break;
+            case R.id.btn_test_sub:
+            goToActivity(SubActivity.class);
+                break;
         }
 
     }

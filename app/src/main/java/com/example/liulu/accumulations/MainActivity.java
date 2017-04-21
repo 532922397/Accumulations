@@ -109,7 +109,7 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration, R.id.btn_intent, R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava, R.id.btn_dagger2})
+    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration,  R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava, R.id.btn_dagger2})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_animation:
@@ -124,9 +124,6 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_intgeration:
                 goToActivity(IntegerationActivity.class);
-                break;
-            case R.id.btn_intent:
-                goToActivity(IntentActivity.class);
                 break;
             case R.id.btn_other:
                 goToActivity(OtherActivity.class);

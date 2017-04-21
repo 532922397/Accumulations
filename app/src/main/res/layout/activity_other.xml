@@ -36,7 +36,18 @@
         android:id="@+id/btn_test_layout"
         style="@style/button_style"
         android:text="测试布局" />
-
+    <Button
+        android:id="@+id/btn_notification"
+        style="@style/button_style"
+        android:text="notification" />
+    <Button
+        android:id="@+id/btn_test_binding"
+        style="@style/button_style"
+        android:text="databinding" />
+    <Button
+        android:id="@+id/btn_test_sub"
+        style="@style/button_style"
+        android:text="截取" />
     <com.example.liulu.accumulations.view.NullMenuEditText
         android:id="@+id/et_show"
         android:layout_width="match_parent"

@@ -26,4 +26,9 @@
         android:id="@+id/btn_lottie"
         style="@style/button_style"
         android:text="tollie动画" />
+
+    <Button
+        android:id="@+id/btn_danmu"
+        style="@style/button_style"
+        android:text="弹幕" />
 </LinearLayout>

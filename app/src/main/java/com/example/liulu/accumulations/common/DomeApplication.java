@@ -22,8 +22,8 @@ public class DomeApplication extends Application {
 
     @Override
     public void onCreate() {
-        instance = new DomeApplication();
-        initHotFix();
+        instance = this;
+    //    initHotFix();
     }
 
     private void initHotFix() {

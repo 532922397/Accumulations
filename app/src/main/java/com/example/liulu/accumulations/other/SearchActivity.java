@@ -3,11 +3,13 @@ package com.example.liulu.accumulations.other;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
-import com.example.liulu.accumulations.wiget.PinYinUtils;
+import com.github.stuxuhai.jpinyin.PinyinException;
+import com.github.stuxuhai.jpinyin.PinyinFormat;
+import com.github.stuxuhai.jpinyin.PinyinHelper;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -19,6 +21,8 @@ public class SearchActivity extends BaseActivity {
     EditText etShow;
     @Bind(R.id.btn_change)
     Button btnChange;
+    @Bind(R.id.show)
+    TextView show;
 
     @Override
     protected void initData() {
@@ -26,13 +30,18 @@ public class SearchActivity extends BaseActivity {
     }
 
     @OnClick(R.id.btn_change)
-
     public void change(View v) {
+        try {
+            String s = PinyinHelper.convertToPinyinString(etShow.getText().toString(), "", PinyinFormat.WITHOUT_TONE);
 
-        String pingYin = PinYinUtils.getFullSpell("刘录");
+//            String s = PinyinHelper.getShortPinyin(etShow.getText().toString());
+            show.setText(s);
+        } catch (PinyinException e) {
+            e.printStackTrace();
+        }
+        // String pingYin = PinYinUtils.getFullSpell("刘录");
+        // show.setText(Pinyin.toPinyin(etShow.getText().toString(),""));
 
-        Toast.makeText(SearchActivity.this, "包含吗?==" + (pingYin.indexOf("uu") == -1 ? false : true), Toast.LENGTH_SHORT).show();
-        etShow.setText(pingYin);
     }
 
 

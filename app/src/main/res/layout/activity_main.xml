@@ -34,11 +34,6 @@
         android:text="集成" />
 
     <Button
-        android:id="@+id/btn_intent"
-        style="@style/button_style"
-        android:text="跳转activity" />
-
-    <Button
 
         android:id="@+id/btn_rxjava"
         style="@style/button_style"

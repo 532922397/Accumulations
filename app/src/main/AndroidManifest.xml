@@ -2,22 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.liulu.accumulations">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 外部存储读权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 友盟统计，这4个权限都是必须添加的 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".common.DomeApplication"
         android:allowBackup="true"
-        android:icon="@drawable/liulu"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- 友盟start -->
+        <!-- appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58ec478e3eae252118000ff6" />
+        <!-- 渠道id -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" />
+        <!-- end -->
         <meta-data
             android:name="com.taobao.android.hotfix.APPSECRET"
             android:value="0ff703aed441a21d44576fc198d9482c" />
@@ -40,7 +53,6 @@
             android:name=".android5.FiveActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".integeration.IntegerationActivity" />
-        <activity android:name=".IntentActivity" />
         <activity android:name=".other.OtherActivity" />
         <activity android:name=".animation.TransferActivity" />
         <activity android:name=".animation.TransferSecondActivity" />
@@ -65,7 +77,12 @@
         <activity android:name=".other.SearchActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
         <activity android:name=".other.IconFontActivity" />
-        <activity android:name=".other.TestLayoutActivity"></activity>
+        <activity android:name=".other.TestLayoutActivity" />
+        <activity android:name=".databinding.DataBindingActivity" />
+        <activity android:name=".other.SubActivity" />
+        <activity android:name=".animation.XDanmuActivity" />
+        <activity android:name=".animation.DanmuActivity" />
+        <activity android:name=".animation.BiliActivity"></activity>
     </application>
 
 </manifest>

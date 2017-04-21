@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_danmu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.liulu.accumulations.animation.XDanmuActivity">
+
+    <com.orzangleli.xdanmuku.DanmuContainerView
+        android:id="@+id/danmuContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <Button
+        android:id="@+id/btn_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_top"
+        android:text="下部显示" />
+
+    <Button
+        android:id="@+id/btn_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_full"
+        android:text="上部显示" />
+
+    <Button
+        android:id="@+id/btn_full"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_create"
+        android:text="全屏显示" />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="添加" />
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_puase"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="暂停&#45;&#45;继续" />-->
+</RelativeLayout>

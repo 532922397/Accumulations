@@ -57,7 +57,7 @@ public class SavePhotoActivity extends BaseActivity {
                 // 把文件插入到系统图库
                 try {
                     MediaStore.Images.Media.insertImage(getContentResolver(),
-                            file.getAbsolutePath() + File.separator + "wuage", fileName, null);
+                            file.getAbsolutePath(), fileName, null);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }

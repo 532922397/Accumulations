@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
-//首先引入 apt
+// 首先引入 apt
 apply plugin: 'com.neenbedankt.android-apt'
+// 引入realm插件
+//apply plugin: 'realm-android'
 buildscript {
     repositories {
         mavenLocal()
@@ -49,8 +51,10 @@ android {
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             }
         }
-
-
+        /*databinding*/
+        dataBinding {
+            enabled = true
+        }
     }
 
     dependencies {
@@ -89,7 +93,30 @@ android {
         apt 'com.google.dagger:dagger-compiler:2.5'
         //compile project(':hotfix_core')
         compile 'com.taobao.android:alisdk-hotfix:1.4.0'
+        // 友盟统计
+        compile 'com.umeng.analytics:analytics:latest.integration'
+        compile 'com.github.SilenceDut:jpinyin:v1.0'
+        // 拼音转换
+//        compile 'com.github.promeg:tinypinyin:2.0.3' // TinyPinyin核心包，约80KB
+
+//        compile 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3' // 可选，适用于Android的中国地区词典
+//
+//        compile 'com.github.promeg:tinypinyin-lexicons-java-cncity:2.0.3' // 可选，适用于Java的中国地区词典
+        // X弹幕
+        compile 'com.github.hust201010701:XDanmuku:master-SNAPSHOT'
+        // 图片加载库glide
+        // compile 'com.github.bumptech.glide:glide:3.7.0'
+        // bilibili弹幕
+//        compile 'com.github.ctiao:DanmakuFlameMaster:0.7.5'
+//        compile 'com.github.ctiao:ndkbitmap-armv7a:0.7.5'
+//
+//        compile 'com.github.ctiao:ndkbitmap-armv5:0.7.5'
+//        compile 'com.github.ctiao:ndkbitmap-x86:0.7.5'
     }
 
 
+}
+
+dependencies {
+    compile project(':DanmakuFlameMaster')
 }

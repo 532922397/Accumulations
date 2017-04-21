@@ -9,9 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/DanmakuFlameMaster" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/demo" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/ndkbitmap-armv5" />
+            <option value="$PROJECT_DIR$/ndkbitmap-armv7a" />
+            <option value="$PROJECT_DIR$/ndkbitmap-x86" />
             <option value="$PROJECT_DIR$/updatebundle" />
           </set>
         </option>
