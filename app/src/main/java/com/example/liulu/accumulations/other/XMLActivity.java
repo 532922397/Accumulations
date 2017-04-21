@@ -17,7 +17,7 @@ import butterknife.OnClick;
 public class XMLActivity extends BaseActivity {
     @Bind(R.id.tv_xml)
     TextView tvXml;
-    private String testXML = "<span>游客</span>查看了<a class=  id  href = www.baidu.com>商品</a>";
+    private String testXML = "<span>流露</span>不是<a class=  id  href = www.baidu.com>神</a>";
 
 
     @Override
