@@ -1,4 +1,4 @@
-package com.example.liulu.accumulations.other;
+package com.example.liulu.accumulations.other.search;
 
 import android.view.View;
 import android.widget.Button;
@@ -39,7 +39,7 @@ public class SearchActivity extends BaseActivity {
         } catch (PinyinException e) {
             e.printStackTrace();
         }
-        // String pingYin = PinYinUtils.getFullSpell("刘录");
+//         String pingYin = PinYinUtils.getFullSpell("刘录");
         // show.setText(Pinyin.toPinyin(etShow.getText().toString(),""));
 
     }

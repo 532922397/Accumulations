@@ -40,6 +40,9 @@ public class AnimationActivity extends BaseActivity {
             case R.id.btn_danmu:
                 goToActivity(DanmuActivity.class);
                 break;
+            case R.id.btn_bg_desktop:
+                goToActivity(DesktopBGActivity.class);
+                break;
         }
 
     }

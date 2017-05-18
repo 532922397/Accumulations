@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * Created by jh on 2017/2/7.
+ * Created by jh on 2017/2/7
  */
 
 public class TestCustomView extends View {

@@ -74,15 +74,16 @@
         <activity android:name=".animation.ByCodeActivity" />
         <activity android:name=".animation.ByNetActivity" />
         <activity android:name=".other.SavePhotoActivity" />
-        <activity android:name=".other.SearchActivity" />
+        <activity android:name=".other.search.SearchActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
         <activity android:name=".other.IconFontActivity" />
-        <activity android:name=".other.TestLayoutActivity" />
         <activity android:name=".databinding.DataBindingActivity" />
         <activity android:name=".other.SubActivity" />
         <activity android:name=".animation.XDanmuActivity" />
         <activity android:name=".animation.DanmuActivity" />
-        <activity android:name=".animation.BiliActivity"></activity>
+        <activity android:name=".animation.BiliActivity" />
+        <activity android:name=".animation.DesktopBGActivity" />
+
     </application>
 
 </manifest>

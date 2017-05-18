@@ -98,7 +98,7 @@ public class BiliActivity extends BaseActivity {
 
     private void addDanmuTextAndImg(boolean isLive) {
         BaseDanmaku danmaku = context.mDanmakuFactory.createDanmaku(BaseDanmaku.TYPE_SCROLL_RL);
-        Drawable drawable = getResources().getDrawable(R.drawable.default_photo);
+        Drawable drawable = getResources().getDrawable(R.drawable.liulu);
         drawable.setBounds(0, 0, 100, 100);
         SpannableStringBuilder spannable = createSpannable(drawable);
         danmaku.text = spannable;
@@ -154,7 +154,7 @@ public class BiliActivity extends BaseActivity {
 
         context = DanmakuContext.create();
         context.setMaximumLines(maxLines)
-                .preventOverlapping(overlappingEnable) // 是否可重叠
+                .preventOverlapping(overlappingEnable)
                 .setDanmakuMargin(40)
                 .setCacheStuffer(new SpannedCacheStuffer(), cacheStufferAdapter); // 设置图文混排
         danmukuview.prepare(parser, context);
@@ -233,4 +233,12 @@ public class BiliActivity extends BaseActivity {
         return R.layout.activity_bili;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(danmukuview!=null) {
+            danmukuview.release();
+            danmukuview=null;
+        }  
+    }
 }

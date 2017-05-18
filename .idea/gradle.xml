@@ -15,7 +15,6 @@
             <option value="$PROJECT_DIR$/ndkbitmap-armv5" />
             <option value="$PROJECT_DIR$/ndkbitmap-armv7a" />
             <option value="$PROJECT_DIR$/ndkbitmap-x86" />
-            <option value="$PROJECT_DIR$/updatebundle" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
