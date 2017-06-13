@@ -1,7 +1,11 @@
 package com.example.liulu.accumulations.customview;
 
+import android.view.View;
+
 import com.example.liulu.accumulations.R;
 import com.example.liulu.accumulations.common.BaseActivity;
+
+import butterknife.OnClick;
 
 
 public class CustomviewActivity extends BaseActivity {
@@ -16,4 +20,14 @@ public class CustomviewActivity extends BaseActivity {
     public int getLayout() {
         return R.layout.activity_customview;
     }
+
+    @OnClick({R.id.btn_flowlayout})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_flowlayout:
+            goToActivity(FlowLayoutActivity.class);
+                break;
+        }
+    }
+
 }

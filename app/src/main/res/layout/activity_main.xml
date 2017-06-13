@@ -7,7 +7,12 @@
     android:orientation="vertical"
     tools:context="com.example.liulu.accumulations.MainActivity">
 
-
+    <ViewStub
+        android:inflatedId="@+id/stub"
+        android:id="@+id/viewstub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/activity_five" />
 
     <Button
         android:id="@+id/btn_animation"
@@ -18,6 +23,7 @@
         android:id="@+id/btn_five"
         style="@style/button_style"
         android:text="5.0" />
+
     <Button
         android:id="@+id/btn_seven"
         style="@style/button_style"
@@ -38,6 +44,7 @@
         android:id="@+id/btn_rxjava"
         style="@style/button_style"
         android:text="rxjava" />
+
     <Button
 
         android:id="@+id/btn_dagger2"

@@ -1,8 +1,15 @@
 package com.example.liulu.accumulations;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.example.liulu.accumulations.Test.ScreenBroadcastListener;
+import com.example.liulu.accumulations.Test.ScreenManager;
 import com.example.liulu.accumulations.android5.FiveActivity;
 import com.example.liulu.accumulations.android7.Android7Activity;
 import com.example.liulu.accumulations.animation.AnimationActivity;
@@ -13,11 +20,12 @@ import com.example.liulu.accumulations.integeration.IntegerationActivity;
 import com.example.liulu.accumulations.other.OtherActivity;
 import com.example.liulu.accumulations.rxjava.RxjavaActivity;
 import com.example.liulu.accumulations.wiget.TestHotFix;
-import com.taobao.hotfix.HotFixManager;
 
 import java.lang.reflect.Method;
 
+import butterknife.Bind;
 import butterknife.OnClick;
+
 
 /**
  * 阿里HotFix
@@ -36,14 +44,43 @@ import butterknife.OnClick;
  * 2。flags  标志位，有CONTEXT_INCLUDE_CODE和CONTEXT_IGNORE_SECURITY两个选项。CONTEXT_INCLUDE_CODE的意思是包括代码，也就是说可以执行这个包里面的代码。CONTEXT_IGNORE_SECURITY的意思是忽略安全警告，如果不加这个标志的话，有些功能是用不了的，会出现安全警告。
  */
 public class MainActivity extends BaseActivity {
+
+
+    @Bind(R.id.btn_other)
+    Button btnOther;
+    @Bind(R.id.activity_main)
+    LinearLayout activityMain;
+    private ScreenManager screenManager;
+
     @Override
     protected void initData() {
-        testHotFix();
+        // testHotFix();
+        if (screenManager != null) {
+            screenManager.finishActivity();
+        } else {
+            ScreenManager.getInstance(this).finishActivity();
+        }
+        setScreenListener();
+    }
 
+    private void setScreenListener() {
+        screenManager = ScreenManager.getInstance(MainActivity.this);
+        ScreenBroadcastListener listener = new ScreenBroadcastListener(this);
+        listener.registerListener(new ScreenBroadcastListener.ScreenStateListener() {
+            @Override
+            public void onScreenOn() {
+                screenManager.finishActivity();
+            }
+
+            @Override
+            public void onScreenOff() {
+                screenManager.startActivity();
+            }
+        });
     }
 
     private void testHotFix() {
-    /*基本测试*/
+        /*基本测试*/
         // Toast.makeText(MainActivity.this, "old app", Toast.LENGTH_SHORT).show();
         // Toast.makeText(MainActivity.this, "new app", Toast.LENGTH_SHORT).show();
 
@@ -109,12 +146,14 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration,  R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava, R.id.btn_dagger2})
+    @OnClick({R.id.btn_animation, R.id.btn_five, R.id.btn_customview, R.id.btn_intgeration, R.id.btn_other, R.id.btn_seven, R.id.btn_rxjava, R.id.btn_dagger2})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_animation:
-                HotFixManager.getInstance().queryNewHotPatch();
-                goToActivity(AnimationActivity.class);
+               /* HotFixManager.getInstance().queryNewHotPatch();
+                goToActivity(AnimationActivity.class);*/
+                Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+                startActivityForResult(intent, 0);
                 break;
             case R.id.btn_five:
                 goToActivity(FiveActivity.class);
@@ -138,5 +177,38 @@ public class MainActivity extends BaseActivity {
                 goToActivity(Dagger2Activity.class);
                 break;
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.e("liulu", "onCreate");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("liulu", "onPause");
+        if (screenManager == null) {
+            ScreenManager.getInstance(this).startActivity();
+        } else {
+            screenManager.startActivity();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (screenManager == null) {
+            ScreenManager.getInstance(this).startActivity();
+        } else {
+            screenManager.startActivity();
+        }
+        Log.e("liulu", "onDestroy");
     }
 }

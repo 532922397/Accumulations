@@ -1,2 +1,2 @@
-include ':app', ':library', ':ndkbitmap-armv7a', ':DanmakuFlameMaster', ':ndkbitmap-armv5', ':ndkbitmap-x86'
+include ':app', ':library', ':ndkbitmap-armv7a', ':DanmakuFlameMaster', ':ndkbitmap-armv5', ':ndkbitmap-x86', ':lib.flowlayout'
 

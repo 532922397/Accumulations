@@ -1,5 +1,7 @@
 package com.example.liulu.accumulations.animation;
 
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -66,4 +68,15 @@ public class AnimationActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.e("liulu", "a+++++++onCreate");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("liulu", "a++++++++onDestroy");
+    }
 }

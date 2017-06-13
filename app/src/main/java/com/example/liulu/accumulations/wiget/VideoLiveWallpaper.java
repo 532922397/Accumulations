@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
-import android.databinding.tool.util.L;
 import android.media.MediaPlayer;
 import android.service.wallpaper.WallpaperService;
 import android.view.SurfaceHolder;
@@ -58,13 +57,10 @@ public class VideoLiveWallpaper extends WallpaperService {
         @Override
         public void onCreate(SurfaceHolder surfaceHolder) {
             super.onCreate(surfaceHolder);
-            L.d("VideoEngine#onCreate");
-
             IntentFilter intentFilter = new IntentFilter(VIDEO_PARAMS_CONTROL_ACTION);
             registerReceiver(mVideoParamsControlReceiver = new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    L.d("onReceive");
                     int action = intent.getIntExtra(KEY_ACTION, -1);
 
                     switch (action) {
@@ -84,7 +80,6 @@ public class VideoLiveWallpaper extends WallpaperService {
 
         @Override
         public void onDestroy() {
-            L.d("VideoEngine#onDestroy");
             unregisterReceiver(mVideoParamsControlReceiver);
             super.onDestroy();
 
@@ -92,7 +87,6 @@ public class VideoLiveWallpaper extends WallpaperService {
 
         @Override
         public void onVisibilityChanged(boolean visible) {
-            L.d("VideoEngine#onVisibilityChanged visible = " + visible);
             if (visible) {
                 mMediaPlayer.start();
             } else {
@@ -103,7 +97,6 @@ public class VideoLiveWallpaper extends WallpaperService {
 
         @Override
         public void onSurfaceCreated(SurfaceHolder holder) {
-            L.d("VideoEngine#onSurfaceCreated ");
             super.onSurfaceCreated(holder);
             mMediaPlayer = new MediaPlayer();
             mMediaPlayer.setSurface(holder.getSurface());
@@ -125,13 +118,11 @@ public class VideoLiveWallpaper extends WallpaperService {
 
         @Override
         public void onSurfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            L.d("VideoEngine#onSurfaceChanged ");
             super.onSurfaceChanged(holder, format, width, height);
         }
 
         @Override
         public void onSurfaceDestroyed(SurfaceHolder holder) {
-            L.d("VideoEngine#onSurfaceDestroyed ");
             super.onSurfaceDestroyed(holder);
             mMediaPlayer.release();
             mMediaPlayer = null;

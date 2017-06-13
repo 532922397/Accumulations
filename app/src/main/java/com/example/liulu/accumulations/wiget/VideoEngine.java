@@ -1,29 +1,19 @@
 package com.example.liulu.accumulations.wiget;
 
 import android.app.WallpaperManager;
-import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-import android.databinding.tool.util.L;
-import android.media.MediaPlayer;
 import android.service.wallpaper.WallpaperService;
-import android.view.SurfaceHolder;
-
-import java.io.IOException;
-
-import static com.example.liulu.accumulations.common.DomeApplication.getContext;
 
 
 /**
  * Created by liulu on 2017/5/17
  */
-public class VideoEngine  extends WallpaperService{
+public class VideoEngine extends WallpaperService {
     public Engine onCreateEngine() {
-        return new VideoEngine();
+        return null;
+        // return new VideoEngine();
     }
 
     public static final String VIDEO_PARAMS_CONTROL_ACTION = "com.zhy.livewallpaper";
@@ -51,7 +41,7 @@ public class VideoEngine  extends WallpaperService{
     }
 
 
-    class VideoEngine extends WallpaperService.Engine {
+    /*class VideoEngine extends WallpaperService.Engine {
 
         private MediaPlayer mMediaPlayer;
 
@@ -139,7 +129,7 @@ public class VideoEngine  extends WallpaperService{
             mMediaPlayer = null;
 
         }
-    }
+    }*/
 
 
 }
