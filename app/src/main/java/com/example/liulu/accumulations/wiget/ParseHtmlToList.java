@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by liulu on 2016/8/24.
+ * Created by liulu on 2016/8/24
  */
 public class ParseHtmlToList {
     public static List<String> getImgSrc(String html) {

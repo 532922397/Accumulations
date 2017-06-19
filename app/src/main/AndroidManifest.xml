@@ -82,16 +82,16 @@
         <activity android:name=".animation.XDanmuActivity" />
         <activity android:name=".animation.DanmuActivity" />
         <activity android:name=".animation.BiliActivity" />
-        <activity android:name=".animation.DesktopBGActivity" />
-        <activity android:name=".customview.FlowLayoutActivity" />
-        <activity
-            android:name=".Test.SinglePixelActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:finishOnTaskLaunch="false"
-            android:launchMode="singleInstance"
-            android:theme="@style/LiveActivityStyle" />
+        <!-- <activity -->
+        <!-- android:name=".Test.SinglePixelActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:finishOnTaskLaunch="false" -->
+        <!-- android:launchMode="singleInstance" -->
+        <!-- android:theme="@style/LiveActivityStyle" /> -->
+        <activity android:name=".animation.NumberRunningActivity" />
+        <activity android:name=".animation.TestSwipeBackActivity"></activity>
     </application>
 
 </manifest>

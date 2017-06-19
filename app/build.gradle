@@ -6,7 +6,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 greendao {
-    schemaVersion 1 //当前数据库版本
+    schemaVersion 2 //当前数据库版本
+    daoPackage 'com.example.greendao.gen' // 生成的数据库相关文件的包名
+    targetGenDir 'src/main/java' // 自定义生成数据库文件的目录
 }
 
 // 引入realm插件
@@ -55,7 +57,7 @@ android {
         }
         buildTypes {
             release {
-                minifyEnabled true
+                minifyEnabled false
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             }
         }
@@ -121,12 +123,10 @@ android {
 //        compile 'com.github.ctiao:ndkbitmap-x86:0.7.5'
 
         compile 'org.greenrobot:greendao:3.2.2' // // greendao配置
+        compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.4.0'// 版本升级使用
+
+        compile project(':DanmakuFlameMaster')
     }
 
 
-}
-
-dependencies {
-    compile project(':DanmakuFlameMaster')
-    compile project(':lib.flowlayout')
 }

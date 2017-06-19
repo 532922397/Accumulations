@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.liulu.accumulations.swipeback.ActivityLifecycleHelper;
 import com.taobao.hotfix.HotFixManager;
 import com.taobao.hotfix.PatchLoadStatusListener;
 import com.taobao.hotfix.util.PatchStatusCode;
@@ -24,6 +25,7 @@ public class DomeApplication extends Application {
     public void onCreate() {
         instance = this;
     //    initHotFix();
+        registerActivityLifecycleCallbacks(ActivityLifecycleHelper.build());
     }
 
     private void initHotFix() {

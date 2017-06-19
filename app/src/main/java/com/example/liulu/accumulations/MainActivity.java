@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.liulu.accumulations.Test.ScreenBroadcastListener;
 import com.example.liulu.accumulations.Test.ScreenManager;
 import com.example.liulu.accumulations.android5.FiveActivity;
 import com.example.liulu.accumulations.android7.Android7Activity;
@@ -54,16 +53,25 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        // testHotFix();
-        if (screenManager != null) {
-            screenManager.finishActivity();
-        } else {
-            ScreenManager.getInstance(this).finishActivity();
-        }
-        setScreenListener();
+//        testHotFix();
+//        if (screenManager != null) {
+//            screenManager.finishActivity();
+//        } else {
+//            ScreenManager.getInstance(this).finishActivity();
+//        }
+       /* GreendaoBean bean = new GreendaoBean();
+        bean.setName("刘录");
+//        bean.setAge("18");
+        bean.setSex("男");
+//        bean.setSay("hello");
+        UserInfoUtils.getInstance(this).saveUser(bean);
+        GreendaoBean g = UserInfoUtils.getInstance(this).loadUser("刘录");
+        if(g!=null) {
+            Toast.makeText(MainActivity.this, g.getName() + ":::" + g.getAge()+ ":::" + g.getSex(), Toast.LENGTH_SHORT).show();
+        }*/
     }
 
-    private void setScreenListener() {
+  /*  private void setScreenListener() {
         screenManager = ScreenManager.getInstance(MainActivity.this);
         ScreenBroadcastListener listener = new ScreenBroadcastListener(this);
         listener.registerListener(new ScreenBroadcastListener.ScreenStateListener() {
@@ -77,7 +85,7 @@ public class MainActivity extends BaseActivity {
                 screenManager.startActivity();
             }
         });
-    }
+    }*/
 
     private void testHotFix() {
         /*基本测试*/
@@ -150,10 +158,10 @@ public class MainActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_animation:
-               /* HotFixManager.getInstance().queryNewHotPatch();
-                goToActivity(AnimationActivity.class);*/
-                Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
-                startActivityForResult(intent, 0);
+               /* HotFixManager.getInstance().queryNewHotPatch();*/
+                goToActivity(AnimationActivity.class);
+                /*Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+                startActivityForResult(intent, 0);*/
                 break;
             case R.id.btn_five:
                 goToActivity(FiveActivity.class);
@@ -194,21 +202,21 @@ public class MainActivity extends BaseActivity {
     protected void onPause() {
         super.onPause();
         Log.e("liulu", "onPause");
-        if (screenManager == null) {
-            ScreenManager.getInstance(this).startActivity();
-        } else {
-            screenManager.startActivity();
-        }
+//        if (screenManager == null) {
+//            ScreenManager.getInstance(this).startActivity();
+//        } else {
+//            screenManager.startActivity();
+//        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (screenManager == null) {
-            ScreenManager.getInstance(this).startActivity();
-        } else {
-            screenManager.startActivity();
-        }
+//        if (screenManager == null) {
+//            ScreenManager.getInstance(this).startActivity();
+//        } else {
+//            screenManager.startActivity();
+//        }
         Log.e("liulu", "onDestroy");
     }
 }

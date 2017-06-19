@@ -8,6 +8,7 @@ import com.example.liulu.accumulations.common.BaseActivity;
 import butterknife.OnClick;
 
 
+
 public class CustomviewActivity extends BaseActivity {
 
 
@@ -23,11 +24,7 @@ public class CustomviewActivity extends BaseActivity {
 
     @OnClick({R.id.btn_flowlayout})
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_flowlayout:
-            goToActivity(FlowLayoutActivity.class);
-                break;
-        }
+
     }
 
 }

@@ -32,7 +32,12 @@
         style="@style/button_style"
         android:text="弹幕" />
     <Button
-        android:id="@+id/btn_bg_desktop"
+        android:id="@+id/btn_number_running"
         style="@style/button_style"
-        android:text="桌面视频背景" />
+        android:text="数字滚动" />
+
+    <Button
+        android:id="@+id/btn_return"
+        style="@style/button_style"
+        android:text="手势返回" />
 </LinearLayout>
